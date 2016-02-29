@@ -1,0 +1,1 @@
+name=Golden Technologies &slog=enhance yourself with technology here&button1=ABOUT &button2=HOSTING&button3=DESIGN&button4=SUPPORT&button5=EMAIL&url1=#&url2=#&url3=#&url4=#&url5=#&iurl1=#&iurl2=#&iurl3=#&iurl4=#&iurl5=#&enddata=1

@@ -1,0 +1,90 @@
+<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="admin_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="background-attachment: fixed; background-image: url(images/pbg.gif); background-repeat: repeat-y">
+        &nbsp;
+        <table border="0" cellpadding="0" cellspacing="0" style="z-index: 100; left: 0px;
+            width: 29%; position: absolute; top: 0px; height: 77%">
+            <tr>
+                <td colspan="2" style="background-attachment: fixed; background-image: url(images/4a.jpg);
+                    background-repeat: no-repeat; height: 66px" valign="top">
+                    <img src="../images/4a.jpg" style="width: 743px; height: 74px" /></td>
+            </tr>
+            <tr>
+                <td style="background-attachment: fixed; background-image: url(images/pbg.gif); width: 16px;
+                    background-repeat: repeat-y; height: 356px" valign="top">
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2"
+                        Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" StaticSubMenuIndent="10px" Width="160px">
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#B5C7DE" />
+                        <StaticSelectedStyle BackColor="#507CD1" />
+                        <DynamicSelectedStyle BackColor="#507CD1" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem Selectable="False" Text="TRANSACTIONS" Value="TRANSACTIONS">
+                                <asp:MenuItem Selectable="False" Text="Accounts" Value="Accounts" Enabled="False">
+                                    <asp:MenuItem Text="Add New Account" Value="AddAcc" Enabled="False" NavigateUrl="~/general_staff/addAcc/AddAccount.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Funds Received" Value="FundsSpent" Enabled="False">
+                                    <asp:MenuItem Text="Add Funds" Value="AddRec" NavigateUrl="~/general_staff/funds_received/AddFundsRec.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Funds Spent" Value="FundsSpent" Enabled="False">
+                                    <asp:MenuItem Text="Add Funds" Value="AddSpent" NavigateUrl="~/admin/funds_spent/AddFundsSpent.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Members" Value="Members" Enabled="False">
+                                    <asp:MenuItem Text="Add New Member" Value="AddMember" NavigateUrl="~/general_staff/members/AddMember.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Projects" Value="Projects" Enabled="False">
+                                    <asp:MenuItem Text="Add New Project" Value="AddProject" NavigateUrl="~/general_staff/projects/AddProject.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Users" Value="Users">
+                                    <asp:MenuItem Text="Add New User" Value="AddUser" Enabled="False" Selectable="False" NavigateUrl="~/admin/users/AddUser.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Delete User" Value="DeleteUser" Enabled="False" NavigateUrl="~/admin/users/DeleteUser.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Change User Access Type" Value="Change User Access Type" Enabled="False" NavigateUrl="~/admin/users/ChangeAccessLevel.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Change Password" Value="ChangePassword" NavigateUrl="~/general_staff/users/ChangePassword.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="False" Text="ENQUIRIES" Value="ENQUIRIES">
+                                <asp:MenuItem Text="Funds Received" Value="FundsRec">
+                                    <asp:MenuItem NavigateUrl="~/general_staff/Enquiries/FundsReceived/ShowAll.aspx" Text="Show All"
+                                        Value="Show All"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/general_staff/Enquiries/FundsReceived/FundsReceived.aspx" Text="Show by Date AND/OR Project"
+                                        Value="Show by Date AND/OR Project"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Funds Spent" Value="FundsSpent">
+                                    <asp:MenuItem NavigateUrl="~/general_staff/Enquiries/FundsSpent/ShowAll.aspx" Text="Show All"
+                                        Value="Show All"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/general_staff/Enquiries/FundsSpent/FundsSpent.aspx" Text="Show By Date"
+                                        Value="Show By Date"></asp:MenuItem>
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="False" Text="REPORTS" Value="REPORTS">
+                                <asp:MenuItem Text="Unavailable" Value="FundsSpent" Enabled="False"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+                <td style="width: 589px; height: 356px" valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <span style="font-size: 0.8em; font-family: Verdana"><strong></strong></span>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" valign="top" style="height: 19px">
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
